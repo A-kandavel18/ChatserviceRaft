@@ -10,12 +10,9 @@
 
    The Chat Service will following 3 methods.
 
- 
-  1. HTTP POST method with no parameters to create a new room chat service. The method's body contains JSON string with Name and description of the chat room
-     
-  2. HTTP POST method with Path variable - Room ID to send Message to chat room. This method expected to invoked with a JSON body with who is the chat sender and content of the message
-     
-  3. HTTP GET method with path variable - Room ID to get recent messages from the chat room. There is no body for this message.
+* POST /rooms — create a room
+* POST /rooms/{roomId}/messages — send a message
+* GET /rooms/{roomId}/messages — get recent messages
      
 
   This API service has been built with MVC pattern
